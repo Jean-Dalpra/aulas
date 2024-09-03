@@ -1,0 +1,226 @@
+.bandeira{
+width: 600px;
+height: 420px;
+border: 5px solid black;
+display: block;
+margin-top: 10px ;
+}
+
+.col3{
+width: 200px;
+height: 420px;
+display: block;
+float: left;
+}
+.azulforte{
+    background-color: blue;
+}
+.vermelho{
+    background-color: red;
+
+}
+.vermelhoe{
+    background-color: darkred;
+
+}
+.preto{
+    background-color: black;
+}
+.amarelo{
+    background-color: yellow;
+
+}
+.azulc{
+
+background-color: lightblue;
+}
+.branco{
+ background-color: white;   
+}
+.verde{
+background-color: green;
+}
+.lin3{
+width: 600px;
+height: 140px;
+display: block;
+float: left;
+
+}
+.bola{
+width: 150px;
+height: 150px;
+display: block;
+float: left;
+border-radius: 100%;
+margin-left: 225px ;
+margin-top: 135px;
+padding-right: -;
+}
+.bolabang{
+    width: 190px;
+    height: 200px;
+    display: block;
+    float: left;
+    border-radius: 100%;
+    margin-left: 140px ;
+    margin-top: 120px;
+    }
+.lisHor{
+width: 600px;
+height: 100px;
+position: relative ;
+top: 150px;
+}
+.lisHorcuba{
+    width: 600px;
+    height: 84px;
+    position: relative ;
+    top: 150px;
+    top: 0px;
+}
+.lisVer{
+    width: 100px;
+    height: 420px;
+    position: relative ;
+    bottom: 100px;
+    left: 150px;
+    
+    }
+.lissuicav{
+width:150px;
+height:400px ;
+position:relative;
+left:225px;
+z-index: 2;
+top:-50px;
+}
+.lissuicah{
+width: 400px;
+height: 150px;
+position: relative ;
+top: 225px;
+z-index: 2;
+left: 100px;    
+
+}
+.bandeiraquadrada{
+width: 600px;
+height: 600px;
+border: 5px solid black;
+display: block;
+margin-top: 10px ;
+z-index: 1;
+}
+
+.lisHorUz{
+width: 600px;
+height: 136.666px;
+}
+.lisHorvermelha{
+width: 600px;
+height: 5px;
+}
+.lisHoruk{
+height: 210px;
+width: 600px;
+}
+
+.triangulo{
+    border-top: 210px solid transparent;
+    border-bottom: 210px solid transparent;
+    border-left: 220px solid black;
+    z-index: 2;
+    position: relative;
+    bottom: 420px;
+}
+.triangulov{
+    border-top: 210px solid transparent;
+    border-bottom: 210px solid transparent;
+    border-left: 220px solid green;
+    z-index: 2;
+    position: relative;
+    bottom: 420px;
+}
+.triangulovermelho{
+    border-top: 210px solid transparent;
+    border-bottom: 210px solid transparent;
+    border-left: 220px solid red;
+    z-index: 2;
+    position: relative;
+    bottom: 420px;
+}
+.triangulovermelhodeguyana{
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 270px solid red;
+    z-index: 4;
+    position: relative;
+    top: 10px;
+}
+.triangulopretodeguyana{
+    border-top: 210px solid transparent;
+    border-bottom: 210px solid transparent;
+    border-left: 330px solid black;
+    z-index: 3;
+    position: relative;
+    top: -400px;
+}
+.trianguloamarelodeguyana{
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 590px solid yellow;
+    z-index: 1;
+    position: relative;
+    bottom: 815px;
+}
+.triangulobrancodeguyana{
+    border-top: 210px solid transparent;
+    border-bottom: 210px solid transparent;
+    border-left: 600px solid white;
+    z-index: 0;
+    position: relative;
+    bottom: 1225px;
+}
+.triangulobrancodocatar{
+    border-top: 24.3px solid transparent;
+    border-bottom: 24.3px solid transparent;
+    border-left: 70px solid white;
+    z-index: 0;
+    position: relative;
+    top: -420px;
+    left: 250px;
+}
+.blocodocatar{
+    width: 250px;
+    height: 420px;
+    position: relative ;
+
+}
+
+.trianguloe{
+    border-top: 0px solid transparent;
+    border-bottom: 420px solid transparent;
+    border-left: 600px solid yellow;
+    z-index: 2;
+    position: relative;
+}
+.lisHorz{
+    width: 600px;
+    height: 140px;
+    position: relative ;
+    top: 150px;
+    position: relative;
+    z-index: 1;
+    top: 0px;
+}    
+.bandeiraz{
+    width: 600px;
+    height: 420px;
+    border: 5px solid black;
+    display: block;
+    margin-top: 10px ;
+    position: relative;
+
+
+}

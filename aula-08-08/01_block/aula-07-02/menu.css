@@ -1,0 +1,50 @@
+#menu{
+    width: 100%;
+    display: block;
+    float: left;
+}
+#menu ul li{
+list-style-type: none;
+float: left;
+}
+#menu ul li a{
+background-color: lightblue;
+padding: 10px;
+text-decoration: none;
+text-shadow: 1px 0px darkblue;
+font-size: 36px;
+}
+#menu ul li a:hover{
+background-color: darkcyan;
+text-decoration: underline;
+text-decoration-color: aqua;
+}
+.Bloco{
+width: 50%;
+height: auto;
+display: block;
+background-color: blueviolet;
+}
+.Bloco img{
+width: 45%;
+
+}
+.Bloco p{
+width: 40%;
+margin: 2%
+
+}
+.esq{
+float: left;
+
+}
+.dir{
+float: right;
+font-size: 30px;
+
+}
+.break{
+clear: both;
+margin-bottom: 30px;
+
+}

@@ -1,0 +1,12 @@
+div {
+    display: inline-block;
+    margin-right: 50px;
+}
+#triangulo-para-cima {
+  width:0px; 
+  height:30px; 
+  border-left: 600px solid transparent;
+  border-right: 600px solid transparent;
+  border-bottom-left-radius:  500px solid black;
+  border-bottom-right-radius:  500px solid black;
+  }

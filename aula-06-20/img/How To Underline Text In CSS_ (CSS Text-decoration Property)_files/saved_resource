@@ -1,0 +1,106 @@
+/**
+* A script to count the comments for each webpage with a given unique id
+* Adding this script into a website will turn all the spans with data-talk-id="unique-id" inner HTML to comment count
+*/
+var hyvorTalkCommentCount = (function() {
+if (typeof HYVOR_TALK_WEBSITE === 'undefined' || ! HYVOR_TALK_WEBSITE )
+    throw Error("HYVOR_TALK_WEBSITE is not defined");
+var DOMAIN_TALK = "https://talk.hyvor.com",
+    JSONP_URL = DOMAIN_TALK + "/web-api/count/get",
+    WEBSITE_ID = HYVOR_TALK_WEBSITE;
+var datasetTalkId = "data-talk-id",
+    datasetTalkMode = "data-talk-mode";
+var Script,
+    SpansArray;
+/**
+* The element should always be a <span>
+* with data-talk-id
+*/
+function trigger() {
+    var spanData = findSpans();
+    if (!spanData)
+        return;
+    var	webpageIdentifiers = spanData.webpageIdentifiers;
+    if (!webpageIdentifiers)
+        return;
+    if (Script)
+        kill(Script);
+    SpansArray = spanData.spansArray; // all spans
+    Script = document.createElement("script");
+    Script.src = getURL();
+    document.body.appendChild(Script);
+    function getURL() {
+        var getParams = queryString({
+            website: WEBSITE_ID,
+            webpageIdentifiers: JSON.stringify(webpageIdentifiers),
+            time: new Date().getTime()
+        });
+        var url = JSONP_URL + "?" + getParams;
+        return url;
+    }
+}
+function findSpans() {
+    var spans = document.getElementsByTagName("span"),
+        webpageIdentifiers = [], // collected webpage ids
+        spansArray = []; // all selected spans
+
+    for (var i = 0, len = spans.length; i < len; i++) {
+
+        var span = spans[i],
+            attr = span.getAttribute(datasetTalkId);
+        if (attr) {
+            webpageIdentifiers.push(attr);
+            spansArray.push(span);
+        }
+
+    }
+
+    return webpageIdentifiers.length > 0 ? {
+        webpageIdentifiers: webpageIdentifiers,
+        spansArray: spansArray
+    } : null;
+
+}
+trigger();
+/*
+* When the server sends the data to the client via JSONOP
+* Called from the JSONP script
+*/
+function receiveData(data) {
+
+    for (var i = 0, len = SpansArray.length; i < len; i++) {
+        var span = SpansArray[i],
+            id = span.getAttribute(datasetTalkId),
+            mode = span.getAttribute(datasetTalkMode) === 'number' ? 'raw' : 'string';
+        span.innerHTML = data[id][mode];
+    }
+
+}
+/* Helper functions */
+function kill(el) {
+    el.parentElement.removeChild(el);
+}
+function event(el, event, func) {
+    el = el || window;
+    if (window.addEventListener) {
+        el.addEventListener(event, func);
+        return function() {el.removeEventListener(event, func)}
+    } else {
+        el.attachEvent("on" + event, func);
+        return function() {el.detachEvent("on" + event, func)}
+    }
+
+}
+function queryString(obj) {
+    var x, first = true, ret = "";
+    for (x in obj) {
+        ret += (!first ? "&" : "") +  x + "=" + obj[x];
+        first = false;
+    }
+    return ret;
+}
+return {
+    update: trigger,
+    receiveData: receiveData
+}
+})();

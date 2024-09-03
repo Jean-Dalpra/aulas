@@ -1,0 +1,15 @@
+body{
+background-image: url(https://img.freepik.com/fotos-gratis/fundo-preto-abstrato-da-grade-digital_53876-97647.jpg);
+background-size: 1500px  ;
+background-position-x: center;
+}
+h1{
+color: rgb(255, 255, 255);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-decoration-line: underline ;
+text-align: center;
+}
+h2{
+color: rgb(255, 255, 255);
+text-align: center;
+}
